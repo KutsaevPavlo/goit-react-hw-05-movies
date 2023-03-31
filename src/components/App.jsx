@@ -1,4 +1,5 @@
 import Home from 'Pages/Home';
+import Movies from 'Pages/Movies';
 import { NavLink, Routes, Route } from 'react-router-dom';
 export const App = () => {
   return (
@@ -13,7 +14,13 @@ export const App = () => {
       </ul>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Movies" element={<div>Movies</div>} />
+        <Route path="/movies" element={<Movies />} />
+        <Route
+          path="/movies/:movieId"
+          element={<div> Cторінка з детальною інформацією про кінофільм.</div>}
+        />
+
+        {/* '/movies/:movieId' */}
       </Routes>
     </div>
   );
