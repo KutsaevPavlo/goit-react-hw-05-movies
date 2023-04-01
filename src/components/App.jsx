@@ -1,26 +1,17 @@
 import Home from 'Pages/Home';
 import Movies from 'Pages/Movies';
-import { NavLink, Routes, Route } from 'react-router-dom';
+import MovieDetails from 'Pages/MovieDetails';
+import { Routes, Route } from 'react-router-dom';
+import { Layout } from './Layout';
 export const App = () => {
   return (
     <div>
-      <ul>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/Movies">Movies</NavLink>
-        </li>
-      </ul>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route
-          path="/movies/:movieId"
-          element={<div> Cторінка з детальною інформацією про кінофільм.</div>}
-        />
-
-        {/* '/movies/:movieId' */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="movies" element={<Movies />} />
+          <Route path="movies/:movieId" element={<MovieDetails />} />
+        </Route>
       </Routes>
     </div>
   );
