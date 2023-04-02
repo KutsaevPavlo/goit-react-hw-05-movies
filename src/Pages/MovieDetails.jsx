@@ -1,14 +1,16 @@
 import { useParams, useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
+import { useRef, Suspense } from 'react';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
   const location = useLocation();
+  const backLinkLocationRef = useRef(location.state?.from ?? '/movies');
 
   return (
     <>
-      <Link to={location.state.from}>Back to movie list</Link>
+      <Link to={backLinkLocationRef.current}>Back to movie list</Link>
       <h1>MovieDetails: {movieId} </h1>
       <ul>
         <li>
@@ -18,7 +20,9 @@ const MovieDetails = () => {
           <Link to="reviews ">Reviews</Link>
         </li>
       </ul>
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };

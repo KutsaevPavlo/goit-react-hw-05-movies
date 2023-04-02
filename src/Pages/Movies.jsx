@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { SearchForm } from 'components/SearchForm';
 import { getSearchingMovies } from 'Services/Api';
 import MovieList from 'components/MovieList';
@@ -29,7 +29,7 @@ const Movies = () => {
       <div>
         {movies &&
           (movies.length > 0 ? (
-            <MovieList movies={movies} searchFilm={searchFilm} />
+            <MovieList movies={movies} />
           ) : (
             <b>There is no such movie</b>
           ))}
