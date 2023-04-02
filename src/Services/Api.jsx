@@ -46,8 +46,10 @@ export const getMovieReviews = async id => {
   return response.data.results;
 };
 
-// export const getMovieReviews = id => {
-//     return axios
-//       .get(RESOURCE.movieDetails + id + '/reviews')
-//       .then(res => res.data.results);
-//   };
+export const getMovieCast = async id => {
+  const response = await axios.get(
+    URLSearchParams.movieDetails + id + '/credits'
+  );
+  console.log(response.data.cast);
+  return response.data.cast;
+};
