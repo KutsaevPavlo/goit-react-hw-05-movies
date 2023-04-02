@@ -12,6 +12,7 @@ axios.defaults.params = {
   api_key: '1efdf9e7a9ff7e2165fc0b365172fcf9',
 };
 
+export const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 const URLSearchParams = {
   trending: '/trending/movie/week',
   search: '/search/movie',
@@ -31,4 +32,8 @@ export const getSearchingMovies = async searchFilm => {
   return response.data.results;
 };
 
-// const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
+export const getMovieDetails = async id => {
+  const response = await axios.get(URLSearchParams.movieDetails + id);
+  console.log(response.data);
+  return response.data;
+};
