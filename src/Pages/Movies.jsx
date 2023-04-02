@@ -1,19 +1,41 @@
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { SearchForm } from 'components/SearchForm';
+import { getSearchingMovies } from 'Services/Api';
+import MovieList from 'components/MovieList';
+
 const Movies = () => {
+  const [movies, setMovies] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchFilm = searchParams.get('query') ?? '';
+
+  useEffect(() => {
+    if (!searchFilm) {
+      return;
+    }
+    getSearchingMovies(searchFilm)
+      .then(movies => setMovies(movies))
+      .catch(err => console.log(err.message));
+  }, [searchFilm]);
+
+  const updateQueryString = query => {
+    const nextParams = query !== '' ? { query } : {};
+    setSearchParams(nextParams);
+  };
+
   return (
     <div>
+      <SearchForm updateQueryString={updateQueryString} />
       <div>
-        {['movies-1', 'movies-2', 'movies-3', 'movies-4', 'movies-5'].map(
-          movies => {
-            return (
-              <Link key={movies} to={`${movies}`}>
-                {movies}
-              </Link>
-            );
-          }
-        )}
+        {movies &&
+          (movies.length > 0 ? (
+            <MovieList movies={movies} searchFilm={searchFilm} />
+          ) : (
+            <b>There is no such movie</b>
+          ))}
       </div>
     </div>
   );
 };
+
 export default Movies;

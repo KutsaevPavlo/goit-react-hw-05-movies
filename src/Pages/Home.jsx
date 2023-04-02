@@ -1,16 +1,20 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getTrendingMovies } from 'Services/Api';
+import MovieList from 'components/MovieList';
 
 const Home = () => {
-  //   useEffect(() => {
-  //     HTTP
-  //   }, []);
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    getTrendingMovies()
+      .then(movies => setMovies(movies))
+      .catch(err => console.log(err.message));
+  }, []);
 
   return (
     <div>
-      <ul>
-        <li>movies-1</li>
-      </ul>
+      <ul>{<MovieList movies={movies} />}</ul>
     </div>
   );
 };

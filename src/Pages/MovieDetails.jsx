@@ -1,12 +1,14 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
+  const location = useLocation();
 
   return (
     <>
+      <Link to={location.state.from}>Back to movie list</Link>
       <h1>MovieDetails: {movieId} </h1>
       <ul>
         <li>
