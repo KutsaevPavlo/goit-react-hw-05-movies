@@ -37,3 +37,17 @@ export const getMovieDetails = async id => {
   console.log(response.data);
   return response.data;
 };
+
+export const getMovieReviews = async id => {
+  const response = await axios.get(
+    URLSearchParams.movieDetails + id + '/reviews'
+  );
+  console.log(response.data.results);
+  return response.data.results;
+};
+
+// export const getMovieReviews = id => {
+//     return axios
+//       .get(RESOURCE.movieDetails + id + '/reviews')
+//       .then(res => res.data.results);
+//   };
