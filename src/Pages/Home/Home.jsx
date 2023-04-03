@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import css from './Home.module.css';
 
 import { getTrendingMovies } from 'Services/Api';
 import MovieList from 'components/MovieList';
@@ -14,7 +15,7 @@ const Home = () => {
 
   return (
     <div>
-      <ul>{<MovieList movies={movies} />}</ul>
+      <ul className={css.HomeUl}>{<MovieList movies={movies} />}</ul>
     </div>
   );
 };
