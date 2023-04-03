@@ -3,7 +3,7 @@ import { Layout } from './Layout/Layout';
 import { lazy } from 'react';
 
 const Home = lazy(() => import('../Pages/Home/Home'));
-const Movies = lazy(() => import('../Pages/Movies'));
+const Movies = lazy(() => import('../Pages/Movies/Movies'));
 const MovieDetails = lazy(() => import('../Pages/MovieDetails/MovieDetails'));
 const Cast = lazy(() => import('./Cast/Cast'));
 const Reviews = lazy(() => import('./Reviews/Reviews'));

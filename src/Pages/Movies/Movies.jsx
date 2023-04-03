@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { SearchForm } from 'components/SearchForm/SearchForm';
 import { getSearchingMovies } from 'Services/Api';
-import MovieList from 'components/MovieList';
+import MovieList from 'components/MovieList/MovieList';
 
 const Movies = () => {
   const [movies, setMovies] = useState(null);
