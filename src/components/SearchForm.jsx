@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const SearchForm = ({ updateQueryString }) => {
   const handleSubmit = e => {
     e.preventDefault();
@@ -12,4 +14,8 @@ export const SearchForm = ({ updateQueryString }) => {
       </form>
     </div>
   );
+};
+
+SearchForm.propTypes = {
+  updateQueryString: PropTypes.func.isRequired,
 };

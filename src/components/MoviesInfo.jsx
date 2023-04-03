@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
+
 import { IMAGE_BASE_URL } from 'Services/Api';
-const MoviesInfo = ({ movie, movieId }) => {
+const MoviesInfo = ({ movie }) => {
   const { title, overview, genres = [], poster_path, vote_average } = movie;
   const imgUrl = IMAGE_BASE_URL + poster_path;
   const score = Math.floor(vote_average * 10);
@@ -16,3 +18,5 @@ const MoviesInfo = ({ movie, movieId }) => {
   );
 };
 export default MoviesInfo;
+
+MoviesInfo.propTypes = { movie: PropTypes.object.isRequired };
