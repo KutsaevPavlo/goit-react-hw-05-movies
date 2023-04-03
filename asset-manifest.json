@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.d7c5b607.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.ecda2683.js",
     "static/js/6.9a292ef7.chunk.js": "/goit-react-hw-05-movies/static/js/6.9a292ef7.chunk.js",
     "static/js/76.f016373d.chunk.js": "/goit-react-hw-05-movies/static/js/76.f016373d.chunk.js",
-    "static/js/371.4a602165.chunk.js": "/goit-react-hw-05-movies/static/js/371.4a602165.chunk.js",
+    "static/js/371.ceff1ff1.chunk.js": "/goit-react-hw-05-movies/static/js/371.ceff1ff1.chunk.js",
     "static/js/597.736e1b76.chunk.js": "/goit-react-hw-05-movies/static/js/597.736e1b76.chunk.js",
     "static/js/681.07e2d40a.chunk.js": "/goit-react-hw-05-movies/static/js/681.07e2d40a.chunk.js",
     "static/js/279.968c5919.chunk.js": "/goit-react-hw-05-movies/static/js/279.968c5919.chunk.js",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css.map",
-    "main.d7c5b607.js.map": "/goit-react-hw-05-movies/static/js/main.d7c5b607.js.map",
+    "main.ecda2683.js.map": "/goit-react-hw-05-movies/static/js/main.ecda2683.js.map",
     "6.9a292ef7.chunk.js.map": "/goit-react-hw-05-movies/static/js/6.9a292ef7.chunk.js.map",
     "76.f016373d.chunk.js.map": "/goit-react-hw-05-movies/static/js/76.f016373d.chunk.js.map",
-    "371.4a602165.chunk.js.map": "/goit-react-hw-05-movies/static/js/371.4a602165.chunk.js.map",
+    "371.ceff1ff1.chunk.js.map": "/goit-react-hw-05-movies/static/js/371.ceff1ff1.chunk.js.map",
     "597.736e1b76.chunk.js.map": "/goit-react-hw-05-movies/static/js/597.736e1b76.chunk.js.map",
     "681.07e2d40a.chunk.js.map": "/goit-react-hw-05-movies/static/js/681.07e2d40a.chunk.js.map",
     "279.968c5919.chunk.js.map": "/goit-react-hw-05-movies/static/js/279.968c5919.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.d7c5b607.js"
+    "static/js/main.ecda2683.js"
   ]
 }
