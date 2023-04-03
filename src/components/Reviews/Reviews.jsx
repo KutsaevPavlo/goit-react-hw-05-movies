@@ -1,6 +1,7 @@
 import { getMovieReviews } from 'Services/Api';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import css from './Reviews.module.css';
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const { movieId } = useParams();
@@ -12,7 +13,7 @@ const Reviews = () => {
   }, [movieId]);
 
   return (
-    <div>
+    <div className={css.ReviewsStyled}>
       {reviews.length > 0 ? (
         <ul>
           {reviews.map(({ id, author, content }) => (

@@ -12,7 +12,7 @@ export const SearchForm = ({ updateQueryString }) => {
       <form action="" onSubmit={handleSubmit} className={css.SearchForm}>
         <input type="text" name="title" className={css.SearchForm_input} />
         <button type="submit" className={css.SearchForm_button}>
-          <span className={css.SearchForm_button_label}>Search</span>
+          Search
         </button>
       </form>
     </div>
